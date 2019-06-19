@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router, Route, Switch } from "react-router-dom";
+import { history } from "./history";
+import { Create } from "./Create";
+import { Event } from "./Event";
+import { Home } from "./Home";
+
+import 'antd/dist/antd.css';
+import "./app.scss";
+import "animate.css/animate.min.css";
+import { Col, Row } from 'antd';
+import { Errors } from './Errors';
+import config from "./config";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+
+      <Row type="flex" justify="center">
+        <Col span={16}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/create" component={Create} />
+            <Route exact path="/:identifier" component={Event} />
+          </Switch>
+        </Col>
+        <Errors />
+      </Row>
+    </Router>
   );
 }
 

@@ -1,0 +1,105 @@
+body {
+    background: #2f3640;
+    padding: 0px 5%;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+}
+
+.dates{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dates .start, .dates .end, .dates .today{    
+    color: white;
+    letter-spacing: 1px;
+}
+
+.dates .start{    
+    left: 0;
+    margin-left: 15px;
+}
+
+.dates .end{
+    right: 0;
+    margin-right: 15px;
+}
+
+.dates .end, 
+.dates .start{
+    top: 22px;
+    font-size: 14pt;
+}
+
+.dates .today{
+    position: absolute;    
+    width: 50px;
+    text-align: center;
+    font-size: 15pt;
+    top: -52px;
+}
+
+.errors{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+
+    .item{
+        margin-bottom: 10px;
+    }
+}
+
+.c-button, .c-button *{
+    background: #ffc832;
+    color: white;
+    border-color: #ffc832;
+    transition: none;
+
+    &:hover{
+        * {            
+            background: #c8961e;
+            border-color: #c8961e;
+        }
+
+        background: #c8961e;
+        border-color: #c8961e;
+    }
+}
+
+.create-page{
+    h2{
+        color: white;
+    }
+    
+    .label{
+        color: white;
+        font-size: 15pt;
+    }
+}
+
+.home-page{
+    h3, h2{
+        // text-align: center;
+        color: white;
+    }
+
+    .home-create-button{
+        display: flex;
+        // justify-content: center;
+
+        button, button *{
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.event-page{
+    h2{
+        color: white;
+    }
+}
