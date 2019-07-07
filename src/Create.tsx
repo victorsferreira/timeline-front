@@ -53,7 +53,7 @@ export class Create extends React.Component<IProps, IState> {
         };
 
         try {
-            const response = await axios.post("http://localhost:4000/event", data);
+            const response = await axios.post(`${process.env.SERVER_URL}/event`, data);
 
             const { eventStore } = this.props;
             const event = response.data.data;
