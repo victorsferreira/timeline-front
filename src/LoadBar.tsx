@@ -47,8 +47,8 @@ export default class LinearDeterminate extends React.Component<IProps, IState> {
             }}>
                 <Line
                     percent={this.state.currentPercent}
-                    strokeWidth="8"
-                    trailWidth="8"
+                    strokeWidth={8}
+                    trailWidth={8}
                     strokeColor="#ffc832"
                     trailColor="#c8961e"
                 />

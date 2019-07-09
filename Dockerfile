@@ -1,11 +1,14 @@
-FROM node:9 as react-builder
-WORKDIR /app
-RUN rm -rf /app/*
-COPY package.json /app
+FROM node:10-alpine as react-builder
+WORKDIR /usr/src/app
+#RUN rm -rf /usr/src/app/*
+#COPY package.json /app
+COPY package*.json ./
 RUN npm install
-RUN npm update
-COPY . /app
+COPY . .
 RUN npm run build
+#RUN npm update
+# COPY . /app
+# RUN npm run build
 
 FROM httpd:2.4
-COPY --from=react-builder ./app/build/ /usr/local/apache2/htdocs/
+COPY --from=react-builder /usr/src/app/build/ /usr/local/apache2/htdocs/
