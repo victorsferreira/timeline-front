@@ -5,6 +5,7 @@ import LoadBar from "./LoadBar";
 import moment from "moment";
 import BookmarkButton from "./BookmarkButton";
 import Title from "antd/lib/typography/Title";
+import config from "./config";
 
 interface IProps {
     refStore: any;
@@ -41,7 +42,7 @@ export class Event extends React.Component<IProps, IState> {
 
     async loadEvent() {
         const { identifier } = this.props.match.params;
-        const response = await axios.get(`${process.env.SERVER_URL}/event/${identifier}`);
+        const response = await axios.get(`${config.SERVER_URL}/event/${identifier}`);
 
         const event = response.data.data;
         this.props.eventStore.loadEvent(event);

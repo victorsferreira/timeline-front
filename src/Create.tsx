@@ -8,6 +8,8 @@ import { Datepicker } from "./Datepicker";
 import { Row, Col, Form, Input } from 'antd';
 import { Alert, Typography } from 'antd';
 import Button from "./Button";
+import config from "./config";
+
 const { Text, Title } = Typography;
 
 const dateFormat = "YYYY-MM-DD";
@@ -53,7 +55,7 @@ export class Create extends React.Component<IProps, IState> {
         };
 
         try {
-            const response = await axios.post(`${process.env.SERVER_URL}/event`, data);
+            const response = await axios.post(`${config.SERVER_URL}/event`, data);
 
             const { eventStore } = this.props;
             const event = response.data.data;
