@@ -9,6 +9,7 @@ import { Row, Col, Form, Input } from 'antd';
 import { Alert, Typography } from 'antd';
 import Button from "./Button";
 import config from "./config";
+import { TiCalendarOutline, TiPlus } from "react-icons/ti";
 
 const { Text, Title } = Typography;
 
@@ -96,16 +97,17 @@ export class Create extends React.Component<IProps, IState> {
                             </Form.Item>
                         </Col>
                         <Col span={6}>
-                            <Form.Item label={<Text className="label" strong>Start date</Text>}>
+                            <Form.Item className="field date" label={<Text className="label" strong>Start date</Text>}>
                                 <Datepicker
                                     onChange={
                                         (value) => { this.setState({ startDate: value }) }
                                     }
                                 />
+                                <TiCalendarOutline className="icon" size="2em" />
                             </Form.Item>
                         </Col>
                         <Col span={6}>
-                            <Form.Item label={<Text className="label" strong>Start end</Text>}>
+                            <Form.Item className="field date" label={<Text className="label" strong>Start end</Text>}>
                                 <Datepicker
                                     onChange={
                                         (value) => { this.setState({ endDate: value }) }
@@ -113,11 +115,12 @@ export class Create extends React.Component<IProps, IState> {
 
                                     date={moment().add(1, 'month')}
                                 />
+                                <TiCalendarOutline className="icon" size="2em" />
                             </Form.Item>
                         </Col>
                     </Row>
 
-                    <Button onClick={this.create.bind(this)}>Create</Button>
+                    <Button onClick={this.create.bind(this)}>Create <TiPlus size="1em" /></Button>
                 </Form>
             </section>
         );

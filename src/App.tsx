@@ -16,7 +16,7 @@ const App: React.FC = () => {
   return (
     <Router history={history}>
 
-      <Row type="flex" justify="center">
+      <Row className="main" type="flex" justify="center">
         <Col span={16}>
           <Switch>
             <Route exact path="/" component={Home} />

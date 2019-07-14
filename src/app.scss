@@ -4,6 +4,20 @@ body {
     overflow: hidden;
 }
 
+.main{
+    align-items: center;
+    height: 100vh;
+}
+
+.field.date{
+    position: relative;
+    .icon{
+        position: absolute;
+        right: 0px;
+        z-index: 100;
+    }    
+}
+
 section {
     width: 100%;
 }
