@@ -50,6 +50,7 @@ export class Datepicker extends React.Component<IProps, IState> {
 
     return (
       <DatePicker
+        className="date-picker"
         customInput={<Input size="large" />}
         selected={selected}
         onChange={this.onChange}

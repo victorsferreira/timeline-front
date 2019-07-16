@@ -18,13 +18,13 @@ export class Home extends React.Component<IProps, IState> {
     render() {
         return (
             <section className="home-page">
-                <Title level={2}>Hurry up!</Title>
-                <Title level={3}>Create your Timeline and track your progress</Title>
+                <Title level={1}>Hurry up!</Title>
+                <Title level={4}>Create your Timeline and track your progress</Title>
                 <div className="home-create-button">
                     <Link className="home-create-button" to="/create">
                         <Button>
-                            Create now!
-                            <TiArrowRightThick />
+                            Create now
+                            <TiArrowRightThick className="icon" size="1.2em" />
                         </Button>
                     </Link>
                 </div>

@@ -86,7 +86,7 @@ export class Create extends React.Component<IProps, IState> {
     render() {
         return (
             <section className="create-page">
-                <Title level={2}> Create your timeline </Title>
+                <Title level={1}> Create your timeline </Title>
 
                 <Form layout="vertical">
 
@@ -103,7 +103,7 @@ export class Create extends React.Component<IProps, IState> {
                                         (value) => { this.setState({ startDate: value }) }
                                     }
                                 />
-                                <TiCalendarOutline className="icon" size="2em" />
+                                <TiCalendarOutline className="icon" size="1.2em" />
                             </Form.Item>
                         </Col>
                         <Col span={6}>
@@ -115,12 +115,12 @@ export class Create extends React.Component<IProps, IState> {
 
                                     date={moment().add(1, 'month')}
                                 />
-                                <TiCalendarOutline className="icon" size="2em" />
+                                <TiCalendarOutline className="icon" size="1.2em" />
                             </Form.Item>
                         </Col>
                     </Row>
 
-                    <Button onClick={this.create.bind(this)}>Create <TiPlus size="1em" /></Button>
+                    <Button onClick={this.create.bind(this)}>Create <TiPlus className="icon" size="1.2em" /></Button>
                 </Form>
             </section>
         );

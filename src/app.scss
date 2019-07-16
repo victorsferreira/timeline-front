@@ -9,12 +9,16 @@ body {
     height: 100vh;
 }
 
+.icon{
+    position: absolute;
+    z-index: 100;
+}
+
 .field.date{
     position: relative;
     .icon{
-        position: absolute;
-        right: 0px;
-        z-index: 100;
+        right: 3px;
+        margin-top: 10px;
     }    
 }
 
@@ -73,7 +77,7 @@ section {
     border-color: #ffc832;
     transition: none;
 
-    &:hover{
+    &:hover, &:focus, &:active{
         * {            
             background: #c8961e;
             border-color: #c8961e;
@@ -85,7 +89,7 @@ section {
 }
 
 .create-page{
-    h2{
+    h2, h1, h4{
         color: white;
     }
     
@@ -93,10 +97,19 @@ section {
         color: white;
         font-size: 15pt;
     }
+
+    button{
+        position: relative;
+        padding-right: 30px;
+        .icon{
+            right: 5px;
+            top: 10px;
+        }
+    }
 }
 
 .home-page{
-    h3, h2{
+    h3, h2, h1, h4{
         // text-align: center;
         color: white;
     }
@@ -105,15 +118,26 @@ section {
         display: flex;
         // justify-content: center;
 
-        button, button *{
+        button, button{
             color: white;
             text-transform: uppercase;
+            position: relative;
+            padding-right: 30px;
+
+            .icon{
+                right: 5px;
+            }
         }
     }
 }
 
 .event-page{
-    h2{
+    h2, h1, h4{
         color: white;
     }
+}
+
+.date-picker {
+    font-size: 1em;
+    padding-right: 10px;
 }

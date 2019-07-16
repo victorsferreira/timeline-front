@@ -87,7 +87,7 @@ export class Event extends React.Component<IProps, IState> {
 
         return (
             <section className="event-page">
-                <Title level={2}>{event.identifier}</Title>
+                <Title level={1}>{event.identifier}</Title>
                 <LoadBar onFinish={this.onFinishLoadingBar} percent={percentage} />
                 <div className="dates">
                     <span className="start">
